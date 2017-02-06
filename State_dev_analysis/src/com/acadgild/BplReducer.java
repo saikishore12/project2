@@ -24,6 +24,7 @@ public class BplReducer extends Reducer<Text, TextPair, Text, NullWritable>{
 		}
 		//validating the percentage to 100%
 		if(objective_percentage>100)
+			//Wrinting the list of states to the output file.
 		context.write(key,null);
 	}
 }
