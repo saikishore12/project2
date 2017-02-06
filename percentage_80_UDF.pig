@@ -1,4 +1,4 @@
-REGISTER /usr/lib/pig/piggybank.jar
+REGISTER '/usr/lib/pig/piggybank.jar';
 REGISTER '/home/acadgild/pig/percentageUDF.jar';
 
 DEFINE percentageUDF 'percentageUDF.percentageUDF';
