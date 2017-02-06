@@ -1,0 +1,18 @@
+hadoop -jar Bpl.jar /flume_import/StatewiseDistrictwisePhysicalProgress.xml /flume_import/out
+
+created a table in mysql (BPL):
+mysql> desc BPL;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| Districts | varchar(20) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+
+
+sqoop export --connect jdbc:mysql://localhost/test --username 'root' -P --table 'BPL' --export-dir '/flume_import/out8/part-r-00000'  -m 1 --columns Districts
+
+output file: /flume_import/out8/part-r-00000
+data in /flume_import/out8/part-r-00000:
+Andhra pradesh
+Telangana
+east godavari
